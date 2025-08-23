@@ -194,7 +194,7 @@
 		<style>
       .hero-title {
         display: flex;
-        align-items: center;
+        align-items: stretch; /* make children fill the same height */
         justify-content: center;
         gap: 0.6em;
         width: 80%;
@@ -205,10 +205,11 @@
         font-weight: 700;
         text-align: left;
       }
-    
+      
       .hero-title img {
-        height: 1.2em;
-        flex-shrink: 0;
+        height: 100%;     /* fill the container height */
+        width: auto;      /* maintain aspect ratio */
+        object-fit: contain; /* keep proportions */
       }
     
       .hero-text {
