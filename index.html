@@ -205,10 +205,64 @@
   </div>
 </div>
 
-  <p style="text-align: center; margin: 10px 0; color: black; font-size: 1.8em;">
-      <strong>Toward a Scalable and Grounded Data Engine for Video LLMs</strong>
-  </p>
+  <!--<p style="text-align: center; margin: 10px 0; color: black; font-size: 1.8em;">-->
+  <!--    <strong>Toward a Scalable and Grounded Data Engine for Video LLMs</strong>-->
+  <!--</p>-->
   <!--#87CEEB-->
+  
+  <p id="typing" style="text-align:center; margin:10px 0; color:black; font-size:1.8em;">
+  <strong>Toward a Scalable and Grounded Data Engine for Video LLMs</strong>
+</p>
+
+<style>
+  /* Caret */
+  .typing-caret::after {
+    content: "│";
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1s steps(1, end) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+</style>
+
+<script>
+  (function () {
+    const p = document.getElementById("typing");
+    const strong = p.querySelector("strong");
+    const full = strong.textContent.trim();
+    strong.textContent = "";              // clear initial text
+    p.classList.add("typing-caret");
+
+    const speed = 35;                      // ms per character
+    let i = 0;
+
+    function typeNext() {
+      if (i <= full.length) {
+        strong.textContent = full.slice(0, i);
+        i++;
+        setTimeout(typeNext, speed);
+      } else {
+        // stop blinking after done (optional)
+        setTimeout(() => p.classList.remove("typing-caret"), 600);
+      }
+    }
+
+    // If you want it to start only when visible:
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(entries => {
+        if (entries.some(e => e.isIntersecting)) {
+          io.disconnect();
+          typeNext();
+        }
+      }, { threshold: 0.2 });
+      io.observe(p);
+    } else {
+      // Fallback: start immediately
+      typeNext();
+    }
+  })();
+</script>
+
   
 		<!--<br />-->
 		<div style="display: flex; justify-content: center; align-items: center;">
@@ -280,7 +334,7 @@
 			.author-list {
 				/* font-family: Arial, sans-serif; */
 				line-height: 1.6;
-				max-width: 75%;
+				max-width: 70%;
 				margin: 0 auto;
 				padding: 20px;
 				font-size: 18pt;
