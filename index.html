@@ -70,9 +70,9 @@
 			margin: 0;
 		}
 		
-		/* .container {
+		.container {
       max-width: 75%; /* or 1200px, or whatever proportion you want */
-    } */
+    }
 
 		.waves-h1 {
 			font-family: 'Lato', sans-serif;
@@ -104,8 +104,7 @@
 		}
 
 		.inner-header {
-			/* height: 65vh; */
-      min-height: clamp(420px, 65vh, 760px);
+			height: 65vh;
 			width: 100%;
 			margin: 0;
 			padding: 0;
@@ -155,27 +154,6 @@
 			animation-duration: 20s;
 		}
 
-    .brand-title{
-      display:flex; flex-wrap: wrap; align-items: flex-end; justify-content: center;
-      gap: 0.5rem;margin: 0 auto; text-align: center;
-      width: 100%;
-      padding: 0 12px;
-    }
-    .brand-logo{ width: clamp(48px, 12vw, 120px); height: auto; vertical-align: bottom;} /*clamp(48px, 12vw, 120px)*/
-    .brand-word{
-      color:#5a39aa; font-weight: 1000;
-      font-size: clamp(60px, 7vw, 72px);
-      line-height: 1.05;
-    }
-    .brand-subtitle{
-      display: block;
-      font-weight: 600;
-      line-height: 1.25; margin: .35rem auto 0; color: #fff;
-      font-size: clamp(25px, 4.2vw, 30px);
-      width:100%;
-    }
-    .cta-wrap{ display: flex; justify-content: center; align-items: center; gap: 0.5rem;flex-wrap: wrap; padding: 6px 12px;}
-
 		@keyframes move-forever {
 			0% {
 				transform: translate3d(-90px, 0, 0);
@@ -215,21 +193,14 @@
 		
 		
 	
+  <div class="container">
   <div>
-  <!-- <div>
     <h1 class="white" style="font-size: 60px; font-weight: 200;">
       <img src="https://uploads.onecompiler.io/43ukcjjr6/43ukcjvjn/strefer_notext.png" 
            alt="strefer logo" 
            width="150" 
            style="margin-right: 0px; vertical-align: bottom;">
       <strong style="color: #5a39aa; vertical-align: bottom; font-size: 120px; font-weight: 1000;">Strefer</strong>: Empowering Video LLMs with Space-Time Referring and Reasoning via Synthetic Instruction Data
-    </h1>
-  </div> -->
-  <div>
-    <h1 class="brand-title">
-      <img class="brand-logo" src="https://uploads.onecompiler.io/43ukcjjr6/43ukcjvjn/strefer_notext.png" alt="strefer logo">
-      <span class="brand-word">Strefer</span>
-      <span class="brand-subtitle">Empowering Video LLMs with Space-Time Referring and Reasoning via Synthetic Instruction Data </span>
     </h1>
   </div>
 </div>
@@ -258,8 +229,6 @@
     color: #ff6600 !important;
     transition: color 0.3s ease;
   }
-  .main-link-button a{min-height: 44px; padding: 0.5rem 0.9rem; border-radius: 999px;}
-  .main-link-button b{font-size: clamp(14px, 3.5vw, 18px);}
 </style>
 
 <script>
@@ -302,10 +271,8 @@
 
   
 <!-- Buttons Section -->
-<!-- <div style="display: flex; justify-content: center; align-items: center;">
-  <div style="display: flex; align-items: center; gap: 20pt;"> -->
-<div class="cta-wrap">
-  <div class="cta-wrap">
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="display: flex; align-items: center; gap: 20pt;">
     
     <div class="main-link-button glow-hover-element"
       style="display: flex; align-items: center; justify-content: center; text-align: center;">
@@ -517,6 +484,9 @@
 	<!--Header ends-->
 	
 	
+	
+	
+	
 <br />
 <br />
 
@@ -528,17 +498,18 @@
     <p><strong>Email:</strong> <a href="mailto:honglu.zhou@salesforce.com">honglu.zhou@salesforce.com</a></p>
   </div>
 </section>
-	
+
 	
 <br />
 <br />
 
-	<section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{zhou2025strefer,
   title={Strefer: Empowering Video LLMs with Space-Time Referring and Reasoning via Synthetic Instruction Data},
   author={Zhou, Honglu and Peng, Xiangyu and Kendre, Shrikant and Ryoo, Michael S. and Savarese, Silvio and Xong, Caiming and Niebles, Juan Carlos},
+  journal={arXiv preprint arXiv:2509.03501},
   year={2025}
 }
 }</code></pre>
@@ -548,7 +519,7 @@
 <br />
 
 <footer class="footer" style="text-align: center;">
-  <div>
+  <div class="container">
     <div class="content has-text-centered" style="display: flex; justify-content: center; gap: 12px; margin-bottom: 10px;">
       <a class="icon-link" href="https://arxiv.org/abs/2509.03501" style="margin: 0 8px;">
         <i class="fas fa-file-pdf"></i>
